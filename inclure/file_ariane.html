@@ -1,0 +1,7 @@
+<p id="hierarchie">
+	[(#ID_PARENT|!={0}|oui)<a href="#URL_SITE_SPIP/"><:accueil_site:></a>]
+		<BOUCLE_ariane(HIERARCHIE){id_rubrique}>
+			[(#ID_PARENT|!={0}|oui) &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a>]
+		</BOUCLE_ariane>
+		[(#ID_PARENT|!={0}|?{[ &gt; <strong class="on">(#TITRE|couper{80})</strong>],<strong class="on"><:accueil_site:></strong>})]
+</p>

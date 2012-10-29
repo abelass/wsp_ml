@@ -1,0 +1,16 @@
+<BOUCLE_nav(RUBRIQUES) {racine} {par num titre, titre}{!par date}{tout}{lang}>
+	<B_enfants>
+	 <ul class="menu-liste menu-items menu-conteneur">
+		<BOUCLE_enfants(RUBRIQUES){id_parent} {par num titre, titre}{tout}>
+		<li class="menu-entree item[ (#EXPOSE)]">
+			<a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a>
+		</li>
+		</BOUCLE_enfants>
+		</ul>
+	</B_enfants>
+</BOUCLE_nav>
+
+
+
+
+

@@ -1,0 +1,37 @@
+<BOUCLE_contenu_produit(PRODUITS){id_produit}>
+[(#REM) Fil d'Ariane ]
+<p id="hierarchie"><BOUCLE_ariane(HIERARCHIE){id_produit}> &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</p>
+
+<div class="contenu-principal">
+	<div class="cartouche">
+		[(#LOGO_PRODUIT|image_reduire{200,200})]
+
+		<h1 class="h1 #EDIT{titre}">#TITRE</h1>
+
+	</div>
+
+	<div class="surlignable">
+		<div class="panier">
+				<dl class="prix">
+				[(#PRECISION_TTC|?{
+					<dt class="label"><:produit_mc:produit_champ_prix_ttc_label:></dt>
+						<dd>#PRIX_TTC</dd>		
+					,
+					<dt class="label"><:produit_mc:label_prix_ht:></dt>
+						<dd>#PRIX_HT<dd>
+					})]
+				</dl>
+				[(#BOUTON_ACTION{[(#VAL{paniers:action_ajouter}|_T)],#URL_ACTION_AUTEUR{remplir_panier,produit-#ID_PRODUIT-1,#SELF},ajax})]
+		</div>
+		[<div class="#EDIT{texte} texte">(#TEXTE|image_reduire{500,0})</div>]
+
+	</div>
+
+
+[(#REM) Gestion du portfolio et des documents ]
+[(#INCLURE{fond=inclure/documents}{id_produit})]
+
+</div>
+
+
+</BOUCLE_contenu_produit>

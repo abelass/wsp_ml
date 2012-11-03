@@ -1,6 +1,7 @@
 <BOUCLE_content(ARTICLES){id_article}>
 [(#REM) Fil d'Ariane ]
-<nav id="hierarchie"><a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_article}><span class="sep"> &gt; </span><a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></BOUCLE_ariane>[<span class="sep"> &gt; </span><strong class="on">(#TITRE|couper{80})</strong>]</nav>
+<nav id="hierarchie"><a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_article}>
+            [(#ID_PARENT|!={0}|oui)  &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a>]</BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</nav>
 
 <article class="content-principal">
 	<header class="cartouche">

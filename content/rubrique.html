@@ -13,7 +13,9 @@
 	<header class="cartouche">
 		[(#LOGO_RUBRIQUE|image_reduire{200,200})]
 		<h1 class="h1 #EDIT{titre}">#TITRE</h1>
-		[<p class="info-publi"><span class="published"><:dernier_ajout:> : (#DATE|affdate_jourcourt).</span></p>]
+		[(#VAL{donnees_date}|a_cacher|non)
+          [<p class="info-publi"><span class="published"><:dernier_ajout:> : (#DATE|affdate_jourcourt).</span></p>]
+          ]
 	</header>
 
 	[<section class="#EDIT{texte} chapo">(#TEXTE)</section>]

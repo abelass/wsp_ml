@@ -10,7 +10,9 @@
 		<h1 class="h1 #EDIT{titre}">#TITRE</h1>
 		[<p class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
 
-		<p class="info-publi"><abbr class="published" title="[(#DATE|date_iso)]">[(#DATE|nom_jour) ][(#DATE|affdate)]</abbr>[<span class="sep">, </span><span class="auteurs"><:par_auteur:> (#LESAUTEURS)</span>]</p>
+		<p class="info-publi">
+            [(#VAL{donnees_date}|a_cacher|non)<abbr class="published" title="[(#DATE|date_iso)]">[(#DATE|nom_jour) ][(#DATE|affdate)]</abbr>[<span class="sep">, </span>]
+            [(#VAL{donnees_auteurs}|a_cacher|non)<span class="auteurs"><:par_auteur:> (#LESAUTEURS)</span>]
 		[(#REM) Inclure le modele des liens de traductions ]
 		#MODELE{article_traductions}
 	</header>

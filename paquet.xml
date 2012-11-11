@@ -15,6 +15,6 @@
 	<necessite nom="mcp1" compatibilite="[0.1.0;]" />
 	<necessite nom="multilingue" compatibilite="[0.2.1;]" />
 	<necessite nom="multilang" compatibilite="[0.3.6;]" />
-
+	<utilise nom="Z5" compatibilite="[2.0.0;[" />
 
 </paquet>

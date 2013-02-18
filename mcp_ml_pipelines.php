@@ -24,7 +24,7 @@ function mcp_ml_pre_insertion($flux){
     $table=$flux['args']['table'];
    if (($table=='spip_articles' OR $table=='spip_rubriques') AND _request('new')=='oui' AND _request('lier_trad')){
         //reprendre les infos de composition
-        $flux['data']['composition_branche_lock'] =  _request('composition_branche_lock');
+        if($table=='spip_rubriques')$flux['data']['composition_branche_lock'] =  _request('composition_branche_lock');
         $flux['data']['composition'] =  _request('composition');
         $flux['data']['composition_lock'] =  _request('composition_lock');       
               

@@ -1,12 +1,11 @@
 #SET{menu,#CONFIG{mcp1/menu_barre_nav}}
-	<INCLURE{fond=inclure/menu_langues#GET{select},env}/>
+[(#CONFIG{multilingue/menu_langue}|oui)
+		#SET{select,_select}
+	]
+<INCLURE{fond=inclure/menu_langues#GET{select},env}/>
 <div class="main-menu">
 [(#GET{menu}|oui)
 	<INCLURE{fond=barre_nav/#GET{menu},env}/>
-	]
-
-	[(#CONFIG{multilingue/menu_langue}|oui)
-		#SET{select,_select}
 	]
 </div>
 

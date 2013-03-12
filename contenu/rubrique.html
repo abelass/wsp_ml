@@ -15,7 +15,6 @@
 			[(#INCLURE{fond=inclure/logo_rubrique,largeur=200,hauteur=200,id_trad})]
 			})]
 		<h1 class="h1 #EDIT{titre}">#TITRE</h1>
-		[<p class="info-publi"><span class="published"><:dernier_ajout:> : (#DATE|affdate_jourcourt).</span></p>]
 	</div>
 
 	[<div class="#EDIT{texte} chapo">(#TEXTE)</div>]
@@ -37,7 +36,6 @@
 	[(#REM) Si aucun article, affiche un plan de la rubrique ]
 	<B_sous_rubriques>
 	<div class="menu rubriques">
-		<h2 class="h2"><:sous_rubriques:></h2>
 		<ul class="menu-liste">
 			<BOUCLE_sous_rubriques(RUBRIQUES) {id_parent} {par num titre, titre}>
 			<li class="menu-entree">

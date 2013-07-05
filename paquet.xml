@@ -12,11 +12,13 @@
 
 	<licence>GNU/GPL</licence>
 
-	<necessite nom="mcp1" compatibilite="[0.1.0;]" />
 	<necessite nom="multilingue" compatibilite="[0.2.1;]" />
 	<necessite nom="multilang" compatibilite="[0.3.6;]" />
+	
 	<utilise nom="Z5" compatibilite="[2.0.0;[" />
-
+	<utilise nom="mcp1" compatibilite="[0.1.0;]" />
+	<utilise nom="wsps_html5" compatibilite="[1.0.0;]" />	
+	
 	<pipeline nom="formulaire_charger" inclure="mcp_ml_pipelines.php" /> 
 	<pipeline nom="pre_insertion" inclure="mcp_ml_pipelines.php" /> 	
 

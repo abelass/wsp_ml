@@ -8,7 +8,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 
 	// M
-	'wsp_ml_titre' => 'Wesb Simple - Multilingue',
+	'wsp_ml_titre' => 'Web Simple - Multilingue',
 
 
 );

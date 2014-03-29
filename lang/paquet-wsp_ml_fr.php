@@ -7,7 +7,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// M
 	'wsp_ml_description' => 'Pack Multilingue',
-	'wsp_ml_nom' => 'My Chacra - Pack Multilingue',
+	'wsp_ml_nom' => 'Web Simple - Pack Multilingue',
 	'wsp_ml_slogan' => 'Int&egrave;gre le multilinguisme',
 );
 

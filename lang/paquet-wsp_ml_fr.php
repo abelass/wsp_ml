@@ -6,9 +6,9 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// M
-	'mcp_ml_description' => 'Pack Multilingue',
-	'mcp_ml_nom' => 'My Chacra - Pack Multilingue',
-	'mcp_ml_slogan' => 'Int&egrave;gre le multilinguisme',
+	'wsp_ml_description' => 'Pack Multilingue',
+	'wsp_ml_nom' => 'My Chacra - Pack Multilingue',
+	'wsp_ml_slogan' => 'Int&egrave;gre le multilinguisme',
 );
 
 ?>

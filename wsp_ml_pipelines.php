@@ -7,7 +7,7 @@
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
-function mcp_ml_formulaire_charger($flux){
+function wsp_ml_formulaire_charger($flux){
     $form = $flux['args']['form'];
     
     if (($form == 'editer_article' OR $form == 'editer_rubrique') AND $flux['args']['args'][0] == 'oui'){
@@ -20,7 +20,7 @@ function mcp_ml_formulaire_charger($flux){
     return $flux;
 }
 
-function mcp_ml_pre_insertion($flux){
+function wsp_ml_pre_insertion($flux){
     $table=$flux['args']['table'];
    if (($table=='spip_articles' OR $table=='spip_rubriques') AND _request('new')=='oui' AND _request('lier_trad')){
         //reprendre les infos de composition

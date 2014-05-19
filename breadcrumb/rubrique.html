@@ -1,10 +1,12 @@
 <BOUCLE_rub(RUBRIQUES){id_rubrique}{tout}>
+<B_ariane>
     [(#REM) Fil d'Ariane ]
     <ul class="breadcrumb">
             [(#ID_PARENT|!={0}|oui)<li><a href="#URL_SITE_SPIP/"><:accueil_site:></a><span class="divider"> &gt; </span></li>]
             <BOUCLE_ariane(HIERARCHIE){id_rubrique}{tout}>
                 [(#ID_PARENT|!={0}|oui|et{#ENV{id_rubrique}|!=={#ID_RUBRIQUE}|oui})<li><a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a><span class="divider"> &gt; </span></li>]
             </BOUCLE_ariane>
-            [(#ID_PARENT|!={0}|?{[<li class="on">(#TITRE|couper{80})],<li class="on"><:accueil_site:></li})]
+            [(#ID_PARENT|!={0}|?{[<li class="on">(#TITRE|couper{80})]</li>,<li class="on"><:accueil_site:></li>})]
     </ul><!--.arbo-->
+</B_ariane>    
 </BOUCLE_rub>

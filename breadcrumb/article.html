@@ -5,6 +5,6 @@
             <BOUCLE_ariane(HIERARCHIE){id_article}{tout}>
                 [(#ID_PARENT|!={0}|oui)<li><a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a><span class="divider"> &gt; </span></li>]
             </BOUCLE_ariane>
-            [(#ID_PARENT|!={0}|?{[<li class="on">(#TITRE|couper{80})],<li class="on"><:accueil_site:></li})]
+            [(#ID_PARENT|!={0}|?{[<li class="on">(#TITRE|couper{80})]</li>,<li class="on"><:accueil_site:></li>})]
     </ul><!--.arbo-->
 </BOUCLE_art>

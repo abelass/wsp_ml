@@ -6,17 +6,17 @@
 	
 ]
 <BOUCLE_secteur(HIERARCHIE){tout}{id_rubrique}{racine}{0,1}{tout}>
-	<BOUCLE_niveler(RUBRIQUES){id_parent}{tout}>
+	<BOUCLE_niveler(RUBRIQUES){id_parent}{par num titre}{tout}>
 <B_rubriques>
 <div class="menu menu_rubriques">
-	<h2>#TITRE</h2>
+	<h2><a href="#URL_RUBRIQUE">#TITRE</a></h2>
 	<ul>
-	<BOUCLE_rubriques(RUBRIQUES) {id_parent} {par num titre}{!par date}{tout}{lang}>
+	<BOUCLE_rubriques(RUBRIQUES) {id_parent} {par num titre}{!par date}{tout}{lang}{si #EXPOSE}>
 		<li>
 			<a href="#URL_RUBRIQUE"[ class="(#EXPOSE)"]>#TITRE</a>
 			<B_sous_rubriques>
 			<ul>
-				<BOUCLE_sous_rubriques(RUBRIQUES) {id_parent} {par num titre}{!par date}><BOUCLE_test_expose(RUBRIQUES) {id_enfant}{tout}>#EXPOSE{' '}</BOUCLE_test_expose>
+				<BOUCLE_sous_rubriques(RUBRIQUES) {id_parent} {par num titre}{!par date}{tout}><BOUCLE_test_expose(RUBRIQUES) {id_enfant}{tout}>#EXPOSE{' '}</BOUCLE_test_expose>
 				<li><a href="#URL_RUBRIQUE"[ class="(#EXPOSE)"]>#TITRE</a><BOUCLE_re(BOUCLE_sous_rubriques)></BOUCLE_re>	</li>
 				</B_test_expose></BOUCLE_sous_rubriques>
 			</ul>

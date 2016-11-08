@@ -4,3 +4,6 @@
 .svn
 _svn
 
+/.buildpath
+/.project
+/.settings/

@@ -12,7 +12,7 @@
 
 	<licence>GNU/GPL</licence>
 
-	<necessite nom="multilingue" compatibilite="[1.0.6;]" />
+	<necessite nom="multilingue" compatibilite="[1.0.7;]" />
 	<necessite nom="multilang" compatibilite="[0.3.6;]" />
 	
 	<utilise nom="Z5" compatibilite="[2.0.0;[" />

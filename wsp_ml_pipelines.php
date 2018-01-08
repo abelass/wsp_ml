@@ -18,14 +18,4 @@ function wsp_ml_formulaire_charger($flux) {
 	}
 	return $flux;
 }
-function wsp_ml_pre_insertion($flux) {
-	$table = $flux['args']['table'];
-	if (($table == 'spip_articles' or $table == 'spip_rubriques') and _request('new') == 'oui' and _request('lier_trad')) {
-		// reprendre les infos de composition
-		if ($table == 'spip_rubriques')
-			$flux['data']['composition_branche_lock'] = _request('composition_branche_lock');
-		$flux['data']['composition'] = _request('composition');
-		$flux['data']['composition_lock'] = _request('composition_lock');
-	}
-	return $flux;
-}
+

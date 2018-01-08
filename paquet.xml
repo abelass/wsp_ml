@@ -1,7 +1,7 @@
 <paquet
 	prefix="wsp_ml"
 	categorie="outil"
-	version="0.2.7"
+	version="0.2.8"
 	etat="test"
 	compatibilite="[3.0.17;32.*]"
 	logo="prive/themes/spip/images/wsp_ml-64.png"

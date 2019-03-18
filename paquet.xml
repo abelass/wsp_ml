@@ -14,7 +14,7 @@
 
 	<necessite nom="multilingue" compatibilite="[1.0.16;]" />
 	<necessite nom="multilang" compatibilite="[1.3.0;]" />
-	<necessite nom="wsps_html5" compatibilite="[1.2.15;]" />
+	<necessite nom="wsps_html5" compatibilite="[1.2.15;1.*.*]" />
 
 	<pipeline nom="formulaire_charger" inclure="wsp_ml_pipelines.php" />
 	<pipeline nom="pre_insertion" inclure="wsp_ml_pipelines.php" />

@@ -1,22 +1,13 @@
-[(#PLUGIN{spipr_dist}|oui)
-    <div class="row">
+<div class="row">
 <header class="accueil clearfix span9">
-    [(#HOME|non)<a rel="start home" href="#URL_SITE_SPIP/" title="<:accueil_site:>"
-    >]<h1 id="logo_site_spip">[(#LOGO_SITE_SPIP|image_reduire{300,100}) ]#NOM_SITE_SPIP
-    [<small id="slogan_site_spip">(#SLOGAN_SITE_SPIP)</small>]
-    </h1>[(#SI_PAGE{sommaire}|non)</a>]
+		[(#HOME|non)<a rel="start home" href="#URL_SITE_SPIP/" title="<:accueil_site:>"
+		>]<h1 id="logo_site_spip">[(#LOGO_SITE_SPIP|image_reduire{300,100}) ]#NOM_SITE_SPIP
+		[<small id="slogan_site_spip">(#SLOGAN_SITE_SPIP)</small>]
+		</h1>[(#SI_PAGE{sommaire}|non)</a>]
 </header>
 <div class="span3">
 <INCLURE{fond=inclure/menu_langues#GET{select},env}/>
 </div>
-</div>]
-[(#PLUGIN{z5}|oui)
-[(#REM)Header pour html5- Z5]
-<div class="accueil clearfix">
-    [<a rel="start home" href="#URL_SITE_SPIP/" title="<:accueil_site:>">(#LOGO_SITE_SPIP|image_reduire{300,100})</a>]
-    <strong id="nom_site_spip" class="h1"><a rel="start home" href="#URL_SITE_SPIP/" title="<:accueil_site:>">#NOM_SITE_SPIP</a></strong>
-    [<div id='slogan_site_spip'>(#SLOGAN_SITE_SPIP|PtoBR)</div>]
 </div>
-<INCLURE{fond=inclure/menu_langues#GET{select},env}/>
-]
+
 

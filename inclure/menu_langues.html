@@ -5,8 +5,7 @@
 <B_traductions>
 <ul class="traductions formulaire_menu_lang menu-liste menu-items menu-conteneur">
 	<BOUCLE_traductions(ARTICLES) {traduction} {par lang}>[(#TOTAL_BOUCLE|>{1}|oui)
-	<li lang="#LANG" xml:lang="#LANG" dir="#LANG_DIR" class="menu-entree item[ (#EXPOSE)]">
-		<a
+	<li lang="#LANG" xml:lang="#LANG" dir="#LANG_DIR" class="menu-entree item[ (#EXPOSE)]"><a
 			href="[(#URL_ACTION_AUTEUR{
 				'converser',
 				'',
@@ -27,8 +26,7 @@
 		<ul class="traductions formulaire_menu_lang menu-liste menu-items menu-conteneur">
 		<BOUCLE_rubrique(RUBRIQUES){id_rubrique}{tout}>
 			<BOUCLE_traductions_rub(RUBRIQUES) {traduction} {par lang}{tout}>[(#TOTAL_BOUCLE|>{1}|oui)
-			<li lang="#LANG" xml:lang="#LANG" dir="#LANG_DIR" class="menu-entree item[ (#EXPOSE)]">
-				<a
+			<li lang="#LANG" xml:lang="#LANG" dir="#LANG_DIR" class="menu-entree item[ (#EXPOSE)]"><a
 					href="[(#URL_ACTION_AUTEUR{
 							'converser',
 							'',
@@ -37,10 +35,7 @@
 								|parametre_url{var_lang,#LANG})]"
 					rel="alternate"
 					hreflang="#LANG"
-					[ title="(#TITRE|attribut_html|couper{80})"]>
-						[(#LANG|traduire_nom_langue)]
-				</a>
-			</li>
+					[ title="(#TITRE|attribut_html|couper{80})"]>[(#LANG|traduire_nom_langue)]</a></li>
 			]</BOUCLE_traductions_rub>
 			</BOUCLE_rubrique>
 		</ul>
@@ -50,8 +45,7 @@
 	<B_langue_possibles>
 		<ul class="traductions formulaire_menu_lang menu-liste menu-items menu-conteneur">
 		<BOUCLE_langue_possibles(POUR){tableau #GET{langues}}>[(#TOTAL_BOUCLE|>{1}|oui)
-			<li lang="#VALEUR" xml:lang="#VALEUR" dir="#LANG_DIR" class="menu-entree item[(#ENV{lang}|=={#VALEUR}|oui) on]">
-				<a
+			<li lang="#VALEUR" xml:lang="#VALEUR" dir="#LANG_DIR" class="menu-entree item[(#ENV{lang}|=={#VALEUR}|oui) on]"><a
 					href="[(#URL_ACTION_AUTEUR{
 							'converser',
 							'',
@@ -60,9 +54,7 @@
 								|parametre_url{var_lang,#VALEUR})]"
 					rel="alternate"
 					hreflang="#VALEUR">
-					[(#VALEUR|traduire_nom_langue)]
-				</a>
-			</li>]
+					[(#VALEUR|traduire_nom_langue)]</a></li>]
 		</BOUCLE_langue_possibles>
 		</ul>
 		</B_langue_possibles>

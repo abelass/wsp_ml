@@ -1,9 +1,7 @@
 <BOUCLE_nav(RUBRIQUES) {racine} {par num titre, titre}{!par date}{tout}{lang}>
 	<B_enfants>
 	<div class="navbar">
-		<label for="show-menu" class="show-menu">Show Menu</label>
-		<input type="checkbox" id="show-menu" role="button">
-		<ul id="nav-menu">
+		<ul>
 			<BOUCLE_enfants(RUBRIQUES){id_parent} {par num titre, titre}{tout}>
 			<li class="nav-item[ (#EXPOSE)][ (#COMPTEUR_BOUCLE|=={1}|oui)first][ (#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|oui)last]">
 				<a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a>

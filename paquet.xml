@@ -1,9 +1,9 @@
 <paquet
 	prefix="wsp_ml"
 	categorie="outil"
-	version="1.0.2"
+	version="1.0.3"
 	etat="stable"
-	compatibilite="[3.0.17;3.2.*]"
+	compatibilite="[3.0.17;3.3.*]"
 	logo="prive/themes/spip/images/wsp_ml-64.png"
 >
 	<nom>Web Simple - Pack  Multilingue</nom>
